@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="首页">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="render" content="webkit">
+    <title>地图导航</title>
+	<link rel="stylesheet" href="css/bootstrap.css">	
+    <link rel="stylesheet" href="css/base.css">
+	<script src="http://hovertree.com/ziyuan/jquery/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=MtoRjiyzPYsDqqAXgELH7itXxVjjfk6E"></script>
+	<style type="text/css">
+		
+		body, html,#allmap {
+			
+			overflow: hidden;
+			margin:0;
+			font-family:"微软雅黑";
+		}
+		body,html{
+			width: 100%;
+			height: 100%;
+		}
+		#allmap{
+			width:100%;
+			height: 480px;
+		}
+		#r-result,#r-result table{
+			position: relative;
+			width:100%;
+			height: 430px;
+			overflow: auto;
+			background-color: #fff;
+		}
+		.blank-word{
+			width: 100%;
+			color: rgba(255, 218, 121,1.0);
+			font-size: 26px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+	</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div id="header">
+		<nav class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<img src="img/Mountain.png" width="40"/>
+					<a class="navbar-brand" href="####" style="margin-right:30px">洛阳风光</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">首       页<span class="sr-only"></span></a></li>
+						<li class="active"><a href="city.html">城市简介<span class="sr-only"></span></a></li>
+						<li class="active"><a href="famous_story.html">名人事迹<span class="sr-only"></span></a></li>
+						<li class="active"><a href="local_scene.html">当地美景<span class="sr-only"></span></a></li>
+						<li class="active"><a href="special_food.html">特色美食<span class="sr-only"></span></a></li>
+						<li class="active"><a href="map_guide.html">地图导航<span class="sr-only"></span></a></li>
+						<li class="active"><a href="local_star.html">当地明星<span class="sr-only"></span></a></li>
+						<li class="active"><a href="message.php">留言<span class="sr-only"></span></a></li>
+					</ul>
+					<div id="reg_log">
+						<a href="register.html">注册</a>
+						/
+						<a href="login.html">登录</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="space"></div>
+	<!--内容区-->
+	<div class="container">
+		<div class="col-md-8">
+			<!--地图-->
+			<div id="allmap"></div>
+		</div>
+		<div class="col-md-4">
+			<!--搜索框-->
+			<form class="navbar-form navbar-left">
+		        <div class="form-group">
+		        	<input type="text" class="form-control" id="myCity" placeholder="请输入你当前的城市">
+		        </div>
+	        	<button type="button" class="btn btn-default" onclick="gps()" style="background-color: rgb(160,82,45); color: #fff;">搜索驾车路线</button>
+	      	</form>
+	      	<!-- 显示驾车路线 -->
+	      	<div id="r-result"></div>
+		</div>
+		
+	</div>
+	<div class="space"></div>
+	<!--尾部-->
+	<div class="container-fluid">
+		<div id="footer">
+			<div class="about1 col-md-6">
+				<p>&copy; Author : Qwh & Py</p>
+			</div>
+			<div class="about3">
+				<marquee behavior="scroll" direction="right" scrollamount=3 onmouseover=this.stop() onmouseout=this.start()><p>洛阳城里见秋风，欲作家书意万重。 ————唐·张籍 《秋思》</p></marquee>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	var res = document.getElementById('r-result');
+	if(res.innerHTML == ''){
+		res.innerHTML = "<p class='blank-word'>此处显示驾车路线<p>";
+	}
+	
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+//	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+	map.centerAndZoom("洛阳",15);  
+	map.addControl(new BMap.ScaleControl());    //添加左下方比例尺控件
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	map.setCurrentCity("洛阳");          // 设置地图显示的城市
+
+	//点击后规划路线
+	function gps(){
+		var currentCity = document.getElementById('myCity').value;
+		var walking = new BMap.WalkingRoute(map, {renderOptions:{map: map, autoViewport: true}});
+		walking.search(currentCity, "洛阳");
+		
+		//	驾车路线推荐
+		
+		var driving = new BMap.DrivingRoute(map, {renderOptions: {map: map, panel: "r-result", autoViewport: true}});
+		driving.search(currentCity, "洛阳");
+		
+	}
+
+</script>
+</body>
+
+</html>

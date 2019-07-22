@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="首页">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="render" content="webkit">
+    <title>特色美食</title>
+	<link rel="stylesheet" href="css/bootstrap.css">	
+    <link rel="stylesheet" href="css/base.css">
+	<script src="http://hovertree.com/ziyuan/jquery/jquery-1.12.1.min.js"></script>
+
+	<style type="text/css">
+		*{
+		    margin: 0;
+		    padding: 0;
+		}
+		body{
+			overflow: auto;
+		}
+		#container{
+		    position: relative;
+		}
+		.box{
+			position: relative;
+		    padding: 5px;
+		    float: left;
+		}
+		.box_img{
+			width: 220px;
+		    
+		    border: 3px solid lightblue;
+		    box-shadow: 0 0 10px rgb(211,194,148);
+		    
+		    overflow: hidden;
+
+		    
+		}
+		.box_img img{
+		    width: 220px;
+		    height: auto;/* 自适应 */
+		   overflow: hidden;
+		}
+		.img-mask{
+			width: 217px;
+			height: 50%;
+			background-color: rgba(255,255,255,.8);
+			position: absolute;
+			/*bottom: 10px;*/
+			bottom: -50%;
+			left: 50%;
+			opacity: 0;
+			transform: translateX(-50%);
+			transition: all 1s;
+		
+		}
+		.box_img:hover .img-mask{
+			opacity: 1;
+			bottom: 7px;
+		}
+		.img-mask{
+			text-align: center;
+			color: brown;
+			font-size: 17px;
+		}
+	</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div id="header">
+		<nav class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<img src="img/Mountain.png" width="40"/>
+					<a class="navbar-brand" href="####" style="margin-right:30px">洛阳风光</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">首       页<span class="sr-only"></span></a></li>
+						<li class="active"><a href="city.html">城市简介<span class="sr-only"></span></a></li>
+						<li class="active"><a href="famous_story.html">名人事迹<span class="sr-only"></span></a></li>
+						<li class="active"><a href="local_scene.html">当地美景<span class="sr-only"></span></a></li>
+						<li class="active"><a href="special_food.html">特色美食<span class="sr-only"></span></a></li>
+						<li class="active"><a href="map_guide.html">地图导航<span class="sr-only"></span></a></li>
+						<li class="active"><a href="local_star.html">当地明星<span class="sr-only"></span></a></li>
+						<li class="active"><a href="message.php">留言<span class="sr-only"></span></a></li>
+					</ul>
+					<div id="reg_log">
+						<a href="register.html">注册</a>
+						/
+						<a href="login.html">登录</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="space"></div>
+	<!--内容区-->
+	
+	<div id="container">
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">牛肉刀削面</div>
+                <img src="img/f7.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">蜜汁红薯</div>
+                <img src="img/f2.jpg" alt="">
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">牡丹燕菜</div>
+                <img src="img/f3.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">牛肉刀削面</div>
+                <img src="img/f7.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">牡丹燕菜</div>
+                <img src="img/f3.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">焦炸丸子</div>
+                <img src="img/f1.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">牛肉刀削面</div>
+                <img src="img/f7.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">牡丹燕菜</div>
+                <img src="img/f3.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">连汤肉片</div>
+                <img src="img/f4.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">锅贴</div>
+                <img src="img/f6.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">牡丹燕菜</div>
+                <img src="img/f3.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">牛肉刀削面</div>
+                <img src="img/f7.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">鲤鱼跳龙门</div>
+                <img src="img/f5.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">锅贴</div>
+                <img src="img/f6.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">牡丹燕菜</div>
+                <img src="img/f3.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">鲤鱼跳龙门</div>
+                <img src="img/f5.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">蜜汁红薯</div>
+                <img src="img/f2.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">锅贴</div>
+                <img src="img/f6.jpg" alt="">
+            </div>
+        </div>
+		<div class="box">
+            <div class="box_img">
+            	<div class="img-mask">鲤鱼跳龙门</div>
+                <img src="img/f5.jpg" alt="">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+            	<div class="img-mask">锅贴</div>
+                <img src="img/f6.jpg" alt="">
+            </div>
+        </div>
+	</div>
+	
+	<div class="space"></div>
+	<!--尾部-->
+</div>
+<script type="text/javascript" src="js/picWall.js"></script>
+</body>
+
+</html>

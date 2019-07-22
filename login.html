@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="首页">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="render" content="webkit">
+    <title>登录</title>
+	<link rel="stylesheet" href="css/bootstrap.css">	
+    <link rel="stylesheet" href="css/base.css">
+	<script src="http://hovertree.com/ziyuan/jquery/jquery-1.12.1.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+	<div id="header">
+		<nav class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<img src="img/Mountain.png" width="40"/>
+					<a class="navbar-brand" href="####" style="margin-right:30px">洛阳风光</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">首       页<span class="sr-only"></span></a></li>
+						<li class="active"><a href="city.html">城市简介<span class="sr-only"></span></a></li>
+						<li class="active"><a href="famous_story.html">名人事迹<span class="sr-only"></span></a></li>
+						<li class="active"><a href="local_scene.html">当地美景<span class="sr-only"></span></a></li>
+						<li class="active"><a href="special_food.html">特色美食<span class="sr-only"></span></a></li>
+						<li class="active"><a href="map_guide.html">地图导航<span class="sr-only"></span></a></li>
+						<li class="active"><a href="local_star.html">当地明星<span class="sr-only"></span></a></li>
+						<li class="active"><a href="message.php">留言<span class="sr-only"></span></a></li>
+					</ul>
+					<div id="reg_log">
+						<a href="register.html">注册</a>
+						
+						<!--<a href="login.html">登录</a>-->
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="space"></div>
+	<!--内容区-->
+	<div class="container" style="width: 40%;">
+		<h2 style="text-align: center;">登录</h2>
+		<form action="login.php" method="post" id="param_form">
+			<div class="form-group">
+				<label>用户名称</label>
+				<input type="text" class="form-control" id="param_name" name="param_name" placeholder="请填写中文名称">
+		 		<div class="alert alert-danger param_name_error" role="alert" style="display: none;">
+					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+					<span class="sr-only">Error:</span>
+					请正确填写名称！！！
+				</div>
+			</div>
+			<div class="form-group">
+				<label>密码</label>
+				<input type="password" class="form-control" id="param_pass" name="param_pass" placeholder="请填写密码">
+		 		<div class="alert alert-danger param_pass_error" role="alert" style="display: none;">
+					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+					<span class="sr-only">Error:</span>
+					请正确填写密码！！！
+				</div>
+			</div>
+		 	<br />	
+			
+			<button type="submit" class="btn btn-primary" id="btn" disabled="true">登录</button>
+
+		</form>
+	</div>
+
+	<div class="space"></div>
+	<!--尾部-->
+	<div class="container-fluid">
+		<div id="footer">
+			<div class="about1 col-md-6">
+				<p>&copy; Author : Qwh & Py</p>
+			</div>
+
+			<div class="about3">
+				<marquee behavior="scroll" direction="right" scrollamount=3 onmouseover=this.stop() onmouseout=this.start()><p>洛阳城里见秋风，欲作家书意万重。 ————唐·张籍 《秋思》</p></marquee>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+</div>
+<script type="text/javascript">
+	window.onload = function() {
+		
+			var paramName = $('#param_name');
+			var paramPass = $('#param_pass');
+
+
+			var paramName_flag = false;
+			var paramPass_flag = false;
+
+
+			paramName.blur(function(){
+				this.text = $(this).val();
+				var pattern = /[\u4e00-\u9fa5]/;//仅中文
+				if(!pattern.test(this.text)){
+					$('.param_name_error').css('display','block');
+					paramName_flag = false;			
+				}else{
+					$('.param_name_error').css('display','none');
+					paramName_flag = true;
+				}
+				check();
+			})
+			
+			paramPass.blur(function(){
+				this.text = $(this).val();
+				
+				if(this.text == ''){
+					$('.param_pass_error').css('display','block');
+					paramPass_flag = false;
+				}else{
+					$('.param_pass_error').css('display','none');
+					paramPass_flag = true;
+				}
+				check();
+			})
+			
+			
+			function check(){
+				if(paramName_flag && paramPass_flag){
+				//	$("#btn")[0].disabled = false;		//设置按钮恢复点击
+					$("#btn").removeAttr("disabled");	//或直接移除该属性
+					var orderData = $('#param_form').serialize();
+					console.log(orderData);
+				}
+			}
+
+	}
+		
+</script>
+</body>
+
+</html>

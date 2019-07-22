@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="首页">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="render" content="webkit">
+    <title>当地明星</title>
+	<link rel="stylesheet" href="css/bootstrap.css">	
+    <link rel="stylesheet" href="css/base.css">
+	<script src="http://hovertree.com/ziyuan/jquery/jquery-1.12.1.min.js"></script>
+	<style type="text/css">
+		h2{
+			color: #FFFFFF !important;
+		}
+		.container{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			align-content: space-around;
+		}
+		.wrapper{
+			display: inline-block;
+			height: 450px;
+			width: 30%;
+			margin: 20px 10px;
+			position: relative;
+			overflow: hidden;
+
+		}
+		.front,.back{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			-moz-backface-visibility: hidden;
+			transition: transform 1s;
+		}
+		.front{
+			/*background-color: #000;*/
+			transform: perspective(600px) rotateY(0deg);
+		}
+		.back{
+			background-color: rgb(255,250,232);
+			transform: perspective(600px) rotateY(180deg);
+			box-sizing: border-box;
+			padding: 20px;
+			font-size: 17px;
+			font-family: "楷体";
+			overflow: auto;
+		}
+		.wrapper:hover .front{
+			transform: perspective(600px) rotateY(-180deg);
+		}
+		.wrapper:hover .back{
+			transform: perspective(600px) rotateY(0deg);
+		}
+	</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div id="header">
+		<nav class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<img src="img/Mountain.png" width="40"/>
+					<a class="navbar-brand" href="####" style="margin-right:30px">洛阳风光</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">首       页<span class="sr-only"></span></a></li>
+						<li class="active"><a href="city.html">城市简介<span class="sr-only"></span></a></li>
+						<li class="active"><a href="famous_story.html">名人事迹<span class="sr-only"></span></a></li>
+						<li class="active"><a href="local_scene.html">当地美景<span class="sr-only"></span></a></li>
+						<li class="active"><a href="special_food.html">特色美食<span class="sr-only"></span></a></li>
+						<li class="active"><a href="map_guide.html">地图导航<span class="sr-only"></span></a></li>
+						<li class="active"><a href="local_star.html">当地明星<span class="sr-only"></span></a></li>
+						<li class="active"><a href="message.php">留言<span class="sr-only"></span></a></li>
+					</ul>
+					<div id="reg_log">
+						<a href="register.html">注册</a>
+						/
+						<a href="login.html">登录</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="space"></div>
+	<!--内容区-->
+
+	<div class="container">
+		<div class="wrapper">
+			
+			<!--正面-->
+			<div class="front">
+				<h2>王一博</h2>
+			</div>
+
+			<!--反面-->
+			<div class="back">
+				
+		    	王一博（YiBo），1997年8月5日出生于中国河南省洛阳市，亚洲男子团体UNIQ成员。
+		    	2014年9月15日，以UNIQ组合成员身份正式出道；12月，组合获得尖叫爱奇艺之夜颁奖礼最具期待组合奖 [1]  。2015年，主演青春励志电影《梦想合伙人》 [2]  ；同年，随组合获得酷音乐亚洲盛典年度内地最佳新人奖和尖叫爱奇艺之夜颁奖礼年度音乐大奖 [3]  。2016年3月，随组合凭借歌曲《EOEO》获得美国International-K Music Awards最佳编舞奖 [4]  ；4月29日，正式成为综艺节目《天天向上》主持团“天天兄弟”成员；12月，领衔主演都市爱情励志喜剧《人间至味是清欢》 [5]  。
+		    	2017年，主演青春校园仙侠剧《私立蜀山学园》；同年，获得第十七届音乐风云榜年度盛典偶像新势力奖、亚洲影响力盛典最佳新人演员奖以及微博电视影响力盛典年度新锐艺人奖 [6]  。2018年2月，主持湖南卫视春节联欢晚会；3月，担任竞演类真人秀节目《创造101》舞蹈导师 [7]  ；4月，领衔主演仙侠古装剧《陈情令》 [8]  。
+
+			</div>
+			
+		</div>
+		<div class="wrapper">
+			
+			<!--正面-->
+			<div class="front">
+				<h2>孟美岐</h2>
+			</div>
+
+			<!--反面-->
+			<div class="back">
+				
+				孟美岐，1998年10月15日出生于河南省洛阳市，中国内地流行乐女歌手、演员，女子演唱组合火箭少女101、宇宙少女成员。
+				2016年2月25日，随宇宙少女组合正式出道 [1]  ；12月，在爱情电影《舞出我人生之舞所不能》中饰演小飞
+				。2017年6月7日，随组合推出专辑《HAPPY MOMENT》 ；同年，在爱情电影《蓝色生死恋》中饰演欣爱。
+				2018年4月，参加腾讯视频女团青春成长节目《创造101》 ，以第一名的成绩C位出道，成为组合火箭少女101成员；7月26日，随火箭少女101发行电影《西虹市首富》的插曲《卡路里》；8月2日，入选福布斯中国“30位30岁以下精英”音乐榜榜单 ；10月17日，在古装玄幻电影《诛仙I》中饰演碧瑶。
+				2019年1月15日，发布《流浪地球》推广曲《有种》 ；4月23日，发布首张个人EP、团专先导专辑《犟》。
+
+			</div>
+			
+		</div>
+		<div class="wrapper">
+			
+			<!--正面-->
+			<div class="front">
+				<h2>王姿霖</h2>
+			</div>
+
+			<!--反面-->
+			<div class="back">
+				
+    			王姿霖（Livia），1988年7月1日出生于河南省洛阳市，中国内地女歌手、演员，DL组合成员，毕业于武汉音乐学院 [1]  。
+    			2005年，16岁的王姿霖首次参加了湖南卫视选秀节目《超级女声》的比赛，并获得了郑州赛区50强的成绩 [2]  。2010年3月，与刘丹丹一同参加广州亚运会《先声夺金》节目，并获得全国30强 [3-4]  ；同年，随组合获得魅力中国“琴台之声”通俗组金奖 [5]  。2011年，与刘丹丹组成DL组合并参加湖南卫视选秀节目《快乐女声》，获得全国11强；同年9月份签约天娱传媒，从而正式出道 [6]  ；11月，推出赛后首支单曲《你爱写歌》 [7]  。
+    			2012年，参演微电影《暴走》上、下两部 [8]  。2013年，正式宣布与天娱传媒有限公司和平解约 [9]  。2014年7月3日，与成员刘丹丹推出单曲《Darling》 [5]  。2016年3月25日，其参演的校园悬疑网剧《惊声尖校》在腾讯视频播出 [10]  。
+
+			</div>
+			
+		</div>
+
+	</div>
+	
+	<div class="space"></div>
+	<!--尾部-->
+	<div class="container-fluid">
+		<div id="footer">
+			<div class="about1 col-md-6">
+				<p>&copy; Author : Qwh & Py</p>
+			</div>
+
+			<div class="about3">
+				<marquee behavior="scroll" direction="right" scrollamount=3 onmouseover=this.stop() onmouseout=this.start()><p>洛阳城里见秋风，欲作家书意万重。 ————唐·张籍 《秋思》</p></marquee>
+			</div>
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript">
+	window.onload = function(){
+		var allstar = document.getElementsByClassName('front');
+		for(let i=0; i<allstar.length; i++){
+//			alert('url(img/s'+ (i+1) +'.jpg)');
+			allstar[i].style.backgroundImage = 'url(img/s'+ (i+1) +'.jpg)';
+			allstar[i].style.backgroundSize = 'cover';
+		}
+	}
+	
+</script>
+</body>
+
+</html>

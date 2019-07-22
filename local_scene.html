@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="首页">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="render" content="webkit">
+    <title>当地美景</title>
+	<link rel="stylesheet" href="css/bootstrap.css">	
+    <link rel="stylesheet" href="css/base.css">
+    <link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
+	<script src="http://hovertree.com/ziyuan/jquery/jquery-1.12.1.min.js"></script>
+	<style type="text/css">
+
+		.middle1{
+			background: url(img/scene1.jpg);
+			position: relative;
+		}
+		.middle2{
+			background: url(img/scene2.jpg);
+			position: relative;
+		}
+		.middle3{
+			background: url(img/scene3.jpg);
+			position: relative;
+		}
+		.middle4{
+			background: url(img/scene4.jpg);
+			position: relative;
+		}
+		.middle5{
+			background: url(img/scene5.jpg);
+			position: relative;
+		}
+		.media-body{
+			width: 400px;
+			height: 300px;
+			font-size: 18px;
+			line-height: 32px;
+			border-bottom: 2px dashed #C0C0C0;
+		}
+		.image {
+			width: 400px;
+			height: 240px;
+			overflow: hidden;
+			cursor: pointer;
+			margin: 0px 70px 10px 70px;
+		}
+		.image img {
+			width: 100%;
+			height: 100%;
+		}
+		.image-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 40px;
+			box-sizing: border-box;
+		}
+		.image-content h1 {
+			color: #fff;
+			text-transform: uppercase;
+			/* transform: translateY(10px); */
+			transition: 0.4s;
+		}
+		.image:hover .image-content h1 {
+			transform: translateY(-20px);
+		}
+		.icons {
+			position: absolute;
+			right: 40px;
+			bottom: 40px;
+		}
+		.icon {
+			text-decoration: none;
+			color: #333;
+			font-size: 22px;
+			margin: 0 10px;
+			transform: translateY(80px);
+		}
+		.image:hover .icon {
+			transform: translateY(0px);
+		}
+		.icon:nth-child(1) {
+			transition: transform 0.4s 0.05s, color 0.4s;
+		}
+		.icon:nth-child(2) {
+			transition: transform 0.4s 0.1s, color 0.4s;
+		}
+		.icon:nth-child(3) {
+			transition: transform 0.4s 0.15s, color 0.4s;
+		}
+		.icon:hover {
+			color: red;
+		}
+		.image-content::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background: rgba(255, 255, 255, 0.7);
+			width: 100%;
+			height: 0;
+			clip-path: polygon(0 100%, 100% 0, 100% 100%);
+			transition: 0.5s;
+		}
+		.image-content:hover::before {
+			height: 140px;
+		}
+	</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div id="header">
+		<nav class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<img src="img/Mountain.png" width="40"/>
+					<a class="navbar-brand" href="####" style="margin-right:30px">洛阳风光</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">首       页<span class="sr-only"></span></a></li>
+						<li class="active"><a href="city.html">城市简介<span class="sr-only"></span></a></li>
+						<li class="active"><a href="famous_story.html">名人事迹<span class="sr-only"></span></a></li>
+						<li class="active"><a href="local_scene.html">当地美景<span class="sr-only"></span></a></li>
+						<li class="active"><a href="special_food.html">特色美食<span class="sr-only"></span></a></li>
+						<li class="active"><a href="map_guide.html">地图导航<span class="sr-only"></span></a></li>
+						<li class="active"><a href="local_star.html">当地明星<span class="sr-only"></span></a></li>
+						<li class="active"><a href="message.php">留言<span class="sr-only"></span></a></li>
+					</ul>
+					<div id="reg_log">
+						<a href="register.html">注册</a>
+						/
+						<a href="login.html">登录</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="space"></div>
+	<!--内容区-->
+	<!--<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+				  	<img src="img/tl7.jpg" alt="...">
+				  	<div class="caption">
+				    <h3>滨江公园</h3>
+				    <p>忙碌的生活中，闲暇之余，可以与家人回归宁静，感受江天一色的美丽江景。公园里有静谧的江边书屋，供人们看书休息...</p>
+				    <p><a href="#" class="btn btn-primary" role="button">查看详情</a> <a href="#" class="btn btn-default" role="button">点赞</a></p>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+	<div class="container">
+		<div class="media">
+	  		<div class="media-left">
+	    		<div class="image middle1">
+					<div class="image-content">
+						<h1>龙门石窟</h1>
+						<div class="icons">
+							<a href="" class="icon fas fa-heart"></a>
+							<a href="" class="icon fas fa-comment"></a>
+							<a href="" class="icon fas fa-share"></a>
+						</div>
+					</div>
+				</div>
+	  		</div>
+		  	<div class="media-body">
+		    	龙门石窟不仅是整个洛阳旅游的代表，他也是整个河南旅游的代表，你看到河南的旅游宣传片中一定会有龙门石窟。作为中国的四大石窟之一，个人认为龙门石窟是最大气的，因为它的各个石窟都是对外开放的，而且都是呈现给大家。龙门石窟因为地质原因，它可以这么来展现，这也充分展现了河南人民的那份厚重和淳朴。
+		  	</div>
+		</div>
+		<div class="media">
+	  		<div class="media-left">
+	    		<div class="image middle2">
+					<div class="image-content">
+						<h1>白马寺</h1>
+						<div class="icons">
+							<a href="" class="icon fas fa-heart"></a>
+							<a href="" class="icon fas fa-comment"></a>
+							<a href="" class="icon fas fa-share"></a>
+						</div>
+					</div>
+				</div>
+	  		</div>
+		  	<div class="media-body">
+		    	到了洛阳，绝对不能错过白马寺，它是中国首个官办寺庙，佛教祖庭，历史悠久！除了寺庙出名以外，这里还有大名鼎鼎的大唐丞相狄仁杰的墓和中国第一座佛塔--齐云塔，总之来到这里你会不虚此行！
+		  	</div>
+		</div>
+		<div class="media">
+	  		<div class="media-left">
+	    		<div class="image middle3">
+					<div class="image-content">
+						<h1>老君山</h1>
+						<div class="icons">
+							<a href="" class="icon fas fa-heart"></a>
+							<a href="" class="icon fas fa-comment"></a>
+							<a href="" class="icon fas fa-share"></a>
+						</div>
+					</div>
+				</div>
+	  		</div>
+		  	<div class="media-body">
+		    	秀压五岳，奇冠三山！洛阳老君山是我这次河南之旅最大的惊喜！老君山的金顶实在是太美了！我去过无数名山的金顶，老君山的金顶是最具仙气的！当然你一定要选个好天气上山才能一览这人间仙境！老君山是伏牛峰的主峰，站在伏牛极顶，你可以一览众山小！老君山有好几天索道，大家可以根据自己的体力选择，一般坐中灵索道到中天门，然后再爬上金顶的人比较多。或者在中天门换峰林索道下来再爬也可以，能节省不少的时间！
+		  	</div>
+		</div>
+		<div class="media">
+	  		<div class="media-left">
+	    		<div class="image middle4">
+					<div class="image-content">
+						<h1>牡丹园</h1>
+						<div class="icons">
+							<a href="" class="icon fas fa-heart"></a>
+							<a href="" class="icon fas fa-comment"></a>
+							<a href="" class="icon fas fa-share"></a>
+						</div>
+					</div>
+				</div>
+	  		</div>
+		  	<div class="media-body">
+		    	四月的洛阳花开富贵，名动京城的牡丹毫无疑问地成为主角，市内外各大公园都有规模大小不一的牡丹展，我选择了有国家牡丹基因库之称的国家牡丹园，更想了解的是这里的瀚唐千年牡丹王是怎么回事；先说说牡丹园的良心价，每人10元，含北园南园展区，牡丹品种多不胜数，更涵盖了姚黄、魏紫等名品，实在是大开眼界；若进入温室展馆就加10元，出乎意料的惠民。另外园内还有牡丹品种的图片及介绍，具有实在的学习价值；总的说来：当真是不虚此行，来这里来对了。
+		  	</div>
+		</div>
+		<div class="media">
+	  		<div class="media-left">
+	    		<div class="image middle5">
+					<div class="image-content">
+						<h1>白云山</h1>
+						<div class="icons">
+							<a href="" class="icon fas fa-heart"></a>
+							<a href="" class="icon fas fa-comment"></a>
+							<a href="" class="icon fas fa-share"></a>
+						</div>
+					</div>
+				</div>
+	  		</div>
+		  	<div class="media-body">
+		    	白云山属伏牛山脉，核心景区有九龙大峡谷、玉皇顶、小黄山、森林氧吧等。九龙大峡谷瀑布众多，更有玻璃栈道、绝壁栈道，下到谷底后坐索道上山。玉皇顶建议坐索道往返，顶峰建有金顶，有一览众山小之感。九龙大峡谷、玉皇顶运动量很大，各需要3-4小时。森林氧吧属休闲区，可搭配游玩。小长假期间游客也不算多，可住山上玩两天
+		  	</div>
+		</div>
+	</div>
+	<div class="space"></div>
+	<!--尾部-->
+	<div class="container-fluid">
+		<div id="footer">
+			<div class="about1 col-md-6">
+				<p>&copy; Author : Qwh & Py</p>
+			</div>
+
+			<div class="about3">
+				<marquee behavior="scroll" direction="right" scrollamount=3 onmouseover=this.stop() onmouseout=this.start()><p>洛阳城里见秋风，欲作家书意万重。 ————唐·张籍 《秋思》</p></marquee>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
