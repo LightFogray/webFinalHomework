@@ -4,7 +4,7 @@ try{
 	session_start();
 	$dbname = 'qian';
 	$user = 'root';
-	$password = 'qwh263625';
+	$password = '123456';
 	
 	$dbh = new PDO("mysql:host=localhost;dbname=".$dbname,$user,$password);
 	
