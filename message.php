@@ -6,7 +6,7 @@ session_start();
 // D:\xampp\php
 $host = '127.0.0.1';
 $dbuser = 'root';
-$pwd = 'qwh263625';
+$pwd = '123456';
 $dbname = 'qian';	//数据库名
 $db = new mysqli( $host, $dbuser, $pwd, $dbname);
 
